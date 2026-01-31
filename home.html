@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jyothi Nikhita | Frontend Developer</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f5f9;
+}
+
+/* ======================
+   HEADER & NAVBAR
+====================== */
+header {
+  width: 100%;
+  background: rgba(15, 15, 35, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #22d3ee;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #22d3ee;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #a855f7, #22d3ee);
+  transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* ======================
+   HERO SECTION
+====================== */
+.hero {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #22d3ee;
+  box-shadow: 0 0 40px rgba(34, 211, 238, 0.4);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  background: linear-gradient(to right, #a855f7, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: #dbeafe;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+/* ======================
+   BUTTONS
+====================== */
+.buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #a855f7, #22d3ee);
+  color: #020617;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.btn i {
+  margin-right: 6px;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.4);
+}
+
+/* ======================
+   HIGHLIGHTS SECTION
+====================== */
+.section {
+  padding: 80px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  background: linear-gradient(to right, #a855f7, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.25);
+}
+
+.card h3 {
+  color: #22d3ee;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: #e0e7ff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ======================
+   FOOTER
+====================== */
+footer {
+  margin-top: 80px;
+  padding: 30px;
+  text-align: center;
+  background: rgba(15, 15, 35, 0.9);
+}
+
+footer a {
+  color: #c7d2fe;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: 0.3s;
+}
+
+footer a:hover {
+  color: #22d3ee;
+}
+
+footer p {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #c7d2fe;
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero img {
+    margin: auto;
+  }
+
+  .buttons {
+    text-align: center;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="navbar">
+        <a class="logo" href="home.html">
+            <img src="C:\Users\Admin\Downloads\nikki.jpeg" alt="Jyothi Profile">
+            Jyothi
+        </a>
+        <nav>
+            <a class="active" href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html">project</a>
+            <a href="interest.html">Interest</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero">
+    <img src="C:\Users\Admin\Downloads\nikki.jpeg" alt="Jyothi Nikhita">
+
+    <div>
+        <h1>
+            Hi, I’m <span>Jyothi Nikhita</span>
+        </h1>
+
+        <p>
+            A passionate <strong>Frontend Developer</strong> and 
+            <strong>B.Sc Computer Science student</strong>, focused on creating
+            modern, responsive, and user-friendly web interfaces.
+        </p>
+
+        <p>
+            I enjoy transforming ideas into visually appealing websites using
+            HTML, CSS, and JavaScript, while continuously learning new technologies
+            to improve my development skills.
+        </p>
+
+        <div class="buttons">
+            <a href="about.html" class="btn">
+                <i class="fa-solid fa-user"></i> My Profile
+            </a>
+            <a href="C:\Users\Admin\Downloads\IMG-20251213-WA0216+(3).pdf" class="btn">
+                <i class="fa-solid fa-download"></i> Download Resume
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= HIGHLIGHTS ================= -->
+<section class="section">
+    <h1>What I Do</h1>
+
+    <div class="cards">
+        <div class="card">
+            <h3><i class="fa-solid fa-code"></i> Clean Code</h3>
+            <p>
+                Writing structured, readable, and maintainable code
+                following best frontend practices.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3><i class="fa-solid fa-mobile-screen"></i> Responsive Design</h3>
+            <p>
+                Designing websites that work smoothly on desktops,
+                tablets, and mobile devices.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3><i class="fa-solid fa-lightbulb"></i> Continuous Learning</h3>
+            <p>
+                Always exploring new tools, frameworks, and trends
+                in frontend development.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+
+    <p>© 2023 Jyothi Nikhita | Frontend Developer</p>
+</footer>
+
+</body>
+</html>

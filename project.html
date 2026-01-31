@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Jyothi Nikhita</title>
+
+<!-- FONT & ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f5f9;
+}
+
+/* ======================
+   HEADER & NAVBAR
+====================== */
+header {
+  width: 100%;
+  background: rgba(15, 15, 35, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #22d3ee;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #22d3ee;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #a855f7, #22d3ee);
+  transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* ================= PROJECTS ================= */
+.projects-section{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 30px;
+  text-align:center;
+}
+
+.projects-section h1{
+  font-size:2.6rem;
+  margin-bottom:20px;
+  background:linear-gradient(to right,#8b5cf6,#38bdf8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.projects-desc{
+  max-width:800px;
+  margin:0 auto 50px;
+  color:#cbd5f5;
+  line-height:1.7;
+}
+
+.projects-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+/* ================= PROJECT CARD ================= */
+.project-card{
+  background:rgba(255,255,255,0.07);
+  padding:35px 25px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.4s;
+}
+
+.project-card i{
+  font-size:2.5rem;
+  color:#38bdf8;
+  margin-bottom:15px;
+}
+
+.project-card h3{
+  font-size:1.3rem;
+  margin-bottom:10px;
+}
+
+.project-card p{
+  font-size:0.95rem;
+  color:#c7d2fe;
+  line-height:1.6;
+  margin-bottom:15px;
+}
+
+.project-card span{
+  display:block;
+  font-size:0.85rem;
+  color:#a5b4fc;
+  margin-bottom:18px;
+}
+
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 18px 40px rgba(56,189,248,0.35);
+}
+
+/* ================= GITHUB BUTTON ================= */
+.github-link{
+  display:inline-block;
+  padding:8px 18px;
+  border-radius:20px;
+  font-size:0.85rem;
+  text-decoration:none;
+  color:#fff;
+  background:linear-gradient(135deg,#7c3aed,#38bdf8);
+  transition:0.3s;
+}
+
+.github-link i{
+  margin-right:6px;
+}
+
+.github-link:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(56,189,248,0.4);
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="navbar">
+    <a class="logo" href="home.html">
+      <img src="C:\Users\Admin\Downloads\nikki.jpeg" alt="Jyothi">
+      Jyothi
+    </a>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="education.html">Education</a>
+      <a class="active" href="projects.html">Projects</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= PROJECTS SECTION ================= -->
+<section class="projects-section">
+  <h1>My Projects</h1>
+
+  <p class="projects-desc">
+    Below are some of the projects I have worked on to strengthen my
+    frontend development skills and gain hands-on experience in
+    building responsive web applications.
+  </p>
+
+  <div class="projects-container">
+
+    <!-- PROJECT 1 -->
+    <div class="project-card">
+      <i class="fa-solid fa-laptop-code"></i>
+      <h3>Portfolio Website</h3>
+      <p>
+        A professional personal portfolio website showcasing my skills,
+        education, projects, and contact information.
+      </p>
+      <span>HTML • CSS </span>
+      <a href="https://github.com/your-username/portfolio"
+         target="_blank"
+         class="github-link">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-card">
+      <i class="fa-solid fa-calculator"></i>
+      <h3>Calculator App</h3>
+      <p>
+        A responsive calculator application capable of performing basic
+        arithmetic operations with clean UI.
+      </p>
+      <span>HTML • CSS • JavaScript</span>
+      <a href="https://nikhita78.github.io/calculator1/"
+         target="_blank"
+         class="github-link">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="project-card">
+      <i class="fa-solid fa-film"></i>
+      <h3>OTT Platform Clone</h3>
+      <p>
+        A frontend clone of an OTT platform featuring movie cards,
+        categories, and responsive design.
+      </p>
+      <span>HTML • CSS • JavaScript</span>
+      <a href="https://nikhita78.github.io/streaming-website/"
+         target="_blank"
+         class="github-link">
+        <i class="fab fa-github"></i> View on GitHub
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Jyothi Nikhita</title>
+<style>
+    /* ======================
+   GLOBAL RESET
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #f1f5f9;
+  min-height: 100vh;
+}
+
+/* ======================
+   HEADER & NAVBAR
+====================== */
+header {
+  width: 100%;
+  background: rgba(15, 15, 35, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #22d3ee;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #22d3ee;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #a855f7, #22d3ee);
+  transition: 0.3s;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+}
+
+/* ======================
+   ABOUT SECTION
+====================== */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 30px;
+}
+
+.section h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 60px;
+  background: linear-gradient(to right, #a855f7, #22d3ee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ======================
+   CARDS
+====================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 32px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(34, 211, 238, 0.25);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color:#8110ea, #08d5f5;
+}
+
+.card p {
+  color: #e0e7ff;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.card strong {
+  color: #c7d2fe;
+}
+
+/* ======================
+   RESPONSIVE DESIGN
+====================== */
+@media (max-width: 900px) {
+  .section {
+    padding: 60px 25px;
+  }
+
+  .section h1 {
+    font-size: 2.2rem;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="navbar">
+        <a class="logo" href="home.html">
+            <img src="C:\Users\Admin\Downloads\nikki.jpeg" alt="Jyothi">
+            Jyothi
+        </a>
+        <nav>
+            <a href="home.html">Home</a>
+            <a class="active" href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html">project</a>
+            <a href="interest.html">Interest</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="section">
+    <h1>About Me</h1>
+
+    <div class="cards">
+
+        <!-- PROFILE CARD -->
+        <div class="card">
+            <h3>👩‍💻 Frontend Developer</h3>
+            <p>
+                I am a passionate <strong>Frontend Developer</strong> and a
+                <strong>B.Sc Computer Science student</strong> with a strong interest
+                in creating modern, responsive, and user-friendly websites.
+            </p>
+            <p>
+                I enjoy working with HTML, CSS, and JavaScript to turn ideas into
+                visually appealing digital experiences. I focus on clean design,
+                usability, and performance.
+            </p>
+        </div>
+
+        <!-- EDUCATION CARD -->
+        <div class="card">
+            <h3>🎓 Education</h3>
+            <p>
+                <strong>Bachelor of Science (B.Sc) in Computer Science</strong><br>
+                Aditya Degree College
+            </p>
+            <p>
+                I have developed a strong foundation in programming concepts,
+                web technologies, problem solving, and computer fundamentals
+                through my academic journey.
+            </p>
+        </div>
+
+        <!-- CAREER GOAL CARD -->
+        <div class="card">
+            <h3>🚀 Career Objective</h3>
+            <p>
+                To secure a challenging position as a Frontend Developer where
+                I can apply my skills, learn new technologies, and contribute
+                to building impactful digital products.
+            </p>
+            <p>
+                I am highly motivated, adaptable, and eager to grow in a
+                professional work environment.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
